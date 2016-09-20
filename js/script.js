@@ -1,5 +1,4 @@
-var arrNames = [];
-var i;
+var i, arrNames = [], answerUser = "Error!!!";
 
 for (i = 1; i < 6; i++) {
     arrNames[i - 1] = prompt('Введите имя #' + i);
@@ -14,11 +13,9 @@ if ((userName === '') || (userName === null)) {
 
 for (i = 0; i < 5; i++) {
     if (arrNames[i] === userName) {
-        alert(userName + ' , Вы успешно вошли!');
-        i = 100;
+        answerUser = userName + ' , Вы успешно вошли!';
+        break;
     }
 }
 
-if (i < 100) {
-    alert('Error!!!');
-}
+alert(answerUser);
